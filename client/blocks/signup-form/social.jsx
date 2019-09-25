@@ -88,7 +88,7 @@ class SocialSignupForm extends Component {
 		return (
 			<div className="signup-form__social">
 				{ ! this.props.compact && (
-					<p>{ preventWidows( this.props.translate( 'Or create an account using:' ) ) }</p>
+					<p>{ preventWidows( this.props.translate( 'Or connect your existing profile to get started faster.' ) ) }</p>
 				) }
 
 				<div className="signup-form__social-buttons">
@@ -113,25 +113,6 @@ class SocialSignupForm extends Component {
 							this.props.socialService === 'apple' ? this.props.socialServiceResponse : null
 						}
 					/>
-
-					<p className="signup-form__social-buttons-tos">
-						{ this.props.translate(
-							"If you continue with Google or Apple and don't already have a WordPress.com account, you" +
-								' are creating an account and you agree to our' +
-								' {{a}}Terms of Service{{/a}}.',
-							{
-								components: {
-									a: (
-										<a
-											href={ localizeUrl( 'https://wordpress.com/tos/' ) }
-											target="_blank"
-											rel="noopener noreferrer"
-										/>
-									),
-								},
-							}
-						) }
-					</p>
 				</div>
 			</div>
 		);
