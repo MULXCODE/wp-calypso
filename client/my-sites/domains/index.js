@@ -67,6 +67,14 @@ export default function() {
 	);
 
 	page(
+		paths.domainManagementChangeSiteAddress( ':site', ':domain' ),
+		...getCommonHandlers(),
+		domainManagementController.domainManagementChangeSiteAddress,
+		makeLayout,
+		clientRender
+	);
+
+	page(
 		paths.domainManagementRedirectSettings( ':site', ':domain' ),
 		...getCommonHandlers(),
 		domainManagementController.domainManagementRedirectSettings,
