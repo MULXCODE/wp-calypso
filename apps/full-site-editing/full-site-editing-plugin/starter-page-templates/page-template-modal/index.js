@@ -229,9 +229,9 @@ export class PageTemplateModal extends Component {
 
 	render() {
 		const { previewedTemplate, isOpen, isLoading } = this.state;
-		const { isPromptedFromSidebar } = this.props;
+		const { isPromptedFromSidebar, templates } = this.props;
 
-		if ( ! isOpen ) {
+		if ( isEmpty( templates ) || ! isOpen ) {
 			return null;
 		}
 
